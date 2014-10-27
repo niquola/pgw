@@ -1,0 +1,15 @@
+luajit/
+lualib/
+nginx/
+openresty/
+*.tar.gz
+*sw?
+*swp
+*swo
+*~
+pg/
+data/
+luajit
+lualib
+nginx
+openresty
