@@ -13,3 +13,4 @@ luajit
 lualib
 nginx
 openresty
+lua

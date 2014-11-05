@@ -18,21 +18,23 @@ BLD=`pwd`
 cd openresty
 
 ./configure --prefix=$BLD \
-  --with-luajit \
+  --with-lua51 \
   --with-pcre \
-  --with-pcre-jit \
   --with-ipv6 \
   --with-pg_config=$BLD/pg/bin/pg_config \
   --with-http_postgres_module \
   -j4
 
+#  --with-luajit \
+#  --with-pcre-jit \
+
 make & make install
 
-cd ..
-
+cd $BLD
 
 rm  nginx/conf/nginx.conf
-ln -s `pwd`/nginx.conf nginx/conf/nginx.conf
+ln -s $BLD/nginx.conf nginx/conf/nginx.conf
 ls -lah nginx/conf/nginx.conf
 
 exit 0
+

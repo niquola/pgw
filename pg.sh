@@ -1,6 +1,6 @@
 echo 'install packages'
-sudo apt-get -qq update
-sudo apt-get -qqy install git build-essential gettext libreadline6 libreadline6-dev zlib1g-dev flex bison libxml2-dev libxslt-dev || echo 'Ups. No sudo'
+sudo apt-get update
+sudo apt-get -y install git build-essential gettext libreadline6 libreadline6-dev zlib1g-dev flex bison libxml2-dev libxslt-dev || echo 'Ups. No sudo'
 
 export PGHOME="`pwd`/pg"
 mkdir $PGHOME
